@@ -1,5 +1,5 @@
 # hvhq.github.io
-CHESS TIMER
+CHESS TIMER<br />
 An application to count time left of two player playing chess.
 In current verson it only allow Blitz chess, 3min+2.
 1. Run the python file

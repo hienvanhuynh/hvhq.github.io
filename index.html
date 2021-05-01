@@ -1,23 +1,82 @@
 <!DOCTYPE html>
-
+<meta charset="UTF-8">
 <head>
-  
+<script>
+	function switchTab(tabname){
+		var contentAboutMe = document.getElementById('id_aboutme');
+		var contentProject = document.getElementById('id_projects');
+		var tabAboutMe = document.getElementById('id_tab_aboutme');
+		var tabProject = document.getElementById('id_tab_projects');
+		
+		if(tabname=='aboutme'){
+			contentAboutMe.style.display = "block";
+			contentProject.style.display = "none";
+			tabProject.style.backgroundImage = "radial-gradient(farthest-side at 50% 50%, rgb(17,153,34), rgb(17,153,34))";
+			tabAboutMe.style.backgroundImage = "radial-gradient(farthest-side at 50% 50%, rgb(85,220,85), rgb(17,153,34))";
+		}else{
+			//var tabAboutMe = document.getElementById('id_aboutme');
+			//var tabProject = document.getElementById('id_projects');
+			contentAboutMe.style.display = "none";
+			contentProject.style.display = "block";
+			tabAboutMe.style.backgroundImage = "radial-gradient(farthest-side at 50% 50%, rgb(17,153,34), rgb(17,153,34))";
+			tabProject.style.backgroundImage = "radial-gradient(farthest-side at 50% 50%, rgb(85,220,85), rgb(17,153,34))";
+		}
+	}
+</script>
+<style>
+@font-face{
+	font-family: edosz;
+	src: url('./fonts/edosz.ttf');
+}
+html, body{
+	margin:0px;
+	background-color: #aaeebb;
+	overflow-x:hidden;
+}
+
+</style>
 </head>
 <body>
-	<image src="./images/curiositycrab.jpg" style="width:100vw;height:250px;object-fit:fit;position:relative;"/>
-	<div style="background-color:green;width:100vw; height:50px;position:sticky;top:0;">menu bar</div>
-	<b>HUỲNH VĂN HIỀN</b><br />
-  <b>Welcome to my website</b><br />
-  Here are some of my projects demos:<br />
-  <button style="background-color:green;">
-  	<a href="./chesstimer/demo.mp4">
-  		Chesstimer
-  	</a>
-  </button>
-  <button style="background-color:green;">
-  	<a href="./chesstimer/demo.mp4">
-  		Snake Hunting
-  	</a>
-  </button>
-  
+	<div style="display:block;width:100%;height:250px;position:relative;">
+		<image src="./images/curiositycrab.jpg" style="width:100%;height:250px;object-fit:cover;position:absolute;"/>
+		<div style="position:absolute; left:2%; top:20%; transform: translate(0%,-50%);font-family:edosz, arial, san-serif;font-size:60px;color:#22aa33;-webkit-text-stroke:2px black;">
+			<b>HIEN HUYNH VAN</b>
+		</div>
+	</div>
+	<div style="verticle-align:top;padding:0px;background-color:green;width:100vw; height:50px;position:sticky;top:0;">
+		<input id="id_tab_aboutme" type="button" 
+				style="background-image:radial-gradient(farthest-side at 50% 50%, rgb(85,220,85), rgb(17,153,34));
+					border-radius:5px; border:none;width:50%;height:100%;position:absolute;" 
+				onclick="switchTab('aboutme')" value="ABOUT ME"
+		><input id="id_tab_projects" type="button" 
+				style="background-image:radial-gradient(farthest-side at 50% 50%, rgb(17,153,34), rgb(17,153,34));
+					border-radius:5px;border:none;width:50%;height:100%;position:absolute;left:50%" 
+				onclick="switchTab('projects')" value="MY PROJECTS">
+	</div>
+
+	<div id="id_aboutme" style="display:block;">
+		<h1><center><b>Welcome to my website</b><br /><center></h1>
+		<div style="left:5%; top:10%; position: relative;">
+			I am a third-year student from HCMC University of Science. I love traveling, playing chess, and math.
+		</div>
+	</div>
+	<div id="id_projects" style="display:none;">
+		<p style="left:5%; top:10%; position: relative;">
+		Here are some of my projects demos:<br />
+  		<button style="background-color:green;">
+  			<a href="./chesstimer/demo.mp4">
+  			Chesstimer
+  			</a>
+  		</button><br />
+  		<button style="background-color:green;">
+  			<a href="./chesstimer/demo.mp4">
+  			Snake Hunting
+  			</a>
+  		</button>
+		</p>
+	</div>
+	
+  	<div style="position:fixed;left:50%;top:95%;transform:translate(-50%, 0%); font-size:0.75em;">
+  		Website was developed by Hien Huynh Van
+  	</div>
 </body>

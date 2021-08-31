@@ -1,28 +1,12 @@
 <!DOCTYPE html>
 <meta charset="UTF-8">
+<meta http-equiv="X-AU-compatible" content="ie=edge">
 <head>
-<script>
-	function switchTab(tabname){
-		var contentAboutMe = document.getElementById('id_aboutme');
-		var contentProject = document.getElementById('id_projects');
-		var tabAboutMe = document.getElementById('id_tab_aboutme');
-		var tabProject = document.getElementById('id_tab_projects');
-		
-		if(tabname=='aboutme'){
-			contentAboutMe.style.display = "block";
-			contentProject.style.display = "none";
-			tabProject.style.backgroundImage = "radial-gradient(farthest-side at 50% 50%, rgb(17,153,34), rgb(17,153,34))";
-			tabAboutMe.style.backgroundImage = "radial-gradient(farthest-side at 50% 50%, rgb(85,220,85), rgb(17,153,34))";
-		}else{
-			//var tabAboutMe = document.getElementById('id_aboutme');
-			//var tabProject = document.getElementById('id_projects');
-			contentAboutMe.style.display = "none";
-			contentProject.style.display = "block";
-			tabAboutMe.style.backgroundImage = "radial-gradient(farthest-side at 50% 50%, rgb(17,153,34), rgb(17,153,34))";
-			tabProject.style.backgroundImage = "radial-gradient(farthest-side at 50% 50%, rgb(85,220,85), rgb(17,153,34))";
-		}
-	}
-</script>
+<title>Hien Portfolio</title>
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/site.webmanifest">
 <style>
 @font-face{
 	font-family: edosz;
@@ -32,11 +16,12 @@
 	box-sizing: border-box;
 }
 body{
-	margin:0px;
+	margin:0px;	
 	overflow-x:hidden;
+	background:linear-gradient(20deg, rgba(0,10,250,255) 0%, rgba(5,150,220,255) 20%, rgba(20,250,250,255) 80%, rgba(20,200,255,255) 100%);
 }
 .hello-text {
-	font-family:edosz, sans serif;
+	font-family:bungee, edosz, sans serif;
 	font-size:50px;
 	letter-spacing:7px;
 	transition: all 1s linear;
@@ -89,14 +74,18 @@ body{
 		x.textContent = y;
 	},100);
 </script>
+<script src="./lottie-player.js"></script>
+
 </head>
-<body style="overflow-x:hidden;">
-	<div style="width:100%; height:500px;
-		position:relative;
+<body>
+	<div style="display:flex;align-items:stretch;width:100%;height:100vh;">
+	<div style="width:100%;border-radius:20px;position:relative;
+		overflow:hidden;
+		margin:10px;box-shadow:-5px 5px 10px gray,0px 0px 7px gray;
 		background:linear-gradient(20deg, rgba(0,200,255,255) 0%, rgba(150,60,220,255) 20%, rgba(50,200,250,255) 80%, rgba(200,10,255,255) 100%);">
-		<div style="height:350px;
+		<div style="height:340px;
 			width:fit-content;position:absolute;
-			bottom:0%;left:50%;transform:translate(-50%,0);
+			bottom:10px;left:35%;transform:translate(-50%,0);
 			">
 			<div id="hello-text" class="hello-text" style="max-height:100px;overflow:hidden;
 				height:100px;line-height:100px;
@@ -105,9 +94,16 @@ body{
 				animation:typing-pointer-splash 1s steps(2) forwards infinite;
 				display:inline-block;height:100px;line-height:100px;width:fit-content;float:right;">|</div>
 		</div>
+		<lottie-player src="./images/wind-energy.json" alt="" background="transparent"  speed="1"  style="width: 300px; height: 300px;
+			position:absolute;bottom:0;left:0px;" loop autoplay></lottie-player>
+		<lottie-player src="./images/working-man.json" alt="" background="transparent"  speed="1"  style="width: 500px; height: 500px;
+			position:absolute;top:50%;left:50%;transform:translate(0, -50%);" loop autoplay></lottie-player>
+
+	</div>
 	</div>
 	<div class="bot-icon" style="position:fixed;bottom:0;right:0;margin:20px;">
-	</div>
+	</div style="position:relative;top:100vh;">
+<lottie-player src="https://assets5.lottiefiles.com/datafiles/zc3XRzudyWE36ZBJr7PIkkqq0PFIrIBgp4ojqShI/newAnimation.json" alt=""  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop autoplay></lottie-player>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.

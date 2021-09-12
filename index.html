@@ -55,6 +55,27 @@ body{
 		visibility:visible;
 	}
 }
+
+.axis {
+    position: absolute;
+}
+
+.cross-axis {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 5px;
+    height: 100%;
+    background-color: blue;
+}
+
+.main-axis {
+    top: 50%;
+    transform: translateY(-50%);
+    height: 5px;
+    width: 100%;
+    background-color: red;
+}
+
 </style>
 <script>
 	var hello_text = "Hi, I'm Hien";
@@ -79,26 +100,33 @@ body{
 </head>
 <body>
 	<div style="display:flex;align-items:stretch;width:100%;height:100vh;">
-	<div style="width:100%;border-radius:20px;position:relative;
-		overflow:hidden;display:flex;
+	<div class="flexbox-container" style="width:100%;border-radius:20px;position:relative;
+		overflow:hidden;
+		display:flex;flex-wrap:wrap;
+		justify-content:space-around;
+		align-items:center;
 		margin:10px;box-shadow:-5px 5px 10px gray,0px 0px 7px gray;
-		background:linear-gradient(20deg, rgba(0,200,255,255) 0%, rgba(150,60,220,255) 20%, rgba(50,200,250,255) 80%, rgba(200,10,255,255) 100%);">
-		<div style="height:340px;
-			width:fit-content;position:absolute;
-			bottom:10px;left:35%;transform:translate(-50%,0);
+		background:linear-gradient(20deg, rgba(0,200,255,255) 0%, rgba(150,60,220,255) 20%, rgba(50,200,250,255) 80%, rgba(200,10,255,255) 100%);
+		border:1px solid orange;
+		">
+		<div style="height:100px;min-width:400px;
+			width:fit-content;
+			border:1px solid;
 			">
 			<div id="hello-text" class="hello-text" style="max-height:100px;overflow:hidden;
 				height:100px;line-height:100px;
-				position:sticky;top:50px;display:inline-block;">Hi</div>
-			<div class="hello-text"style="position:sticky;top:45px;
+				display:inline-block;">Hi</div>
+			<div class="hello-text"style="
 				animation:typing-pointer-splash 1s steps(2) forwards infinite;
 				display:inline-block;height:100px;line-height:100px;width:fit-content;float:right;">|</div>
 		</div>
 		<!--lottie-player src="./images/wind-energy.json" alt="" background="transparent"  speed="1"  style="width: 300px; height: 300px;
 			position:absolute;bottom:0;left:0px;" loop autoplay></lottie-player-->
-		<lottie-player src="./images/working-man.json" alt="" background="transparent"  speed="1"  style="width: 500px; height: 500px;
-			position:absolute;top:50%;left:50%;transform:translate(0, -50%);" loop autoplay></lottie-player>
-
+		<lottie-player src="./images/working-man.json" alt="" background="transparent"  speed="1"  style="width: 500px; height: 500px;border:1px solid green;
+			" loop autoplay></lottie-player>
+		<div class="axis main-axis"></div>
+		<div class="axis cross-axis"></div>
+		
 	</div>
 	</div>
 	<div class="bot-icon" style="position:fixed;bottom:0;right:0;margin:20px;">
